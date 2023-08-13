@@ -15,8 +15,6 @@ form.addEventListener('submit', function (event) {
     form.reset();
 });
 
-const form = document.getElementById('volunteerForm');
-const messageDiv = document.getElementById('message');
 
 form.addEventListener('submit', async function (event) {
     event.preventDefault();
