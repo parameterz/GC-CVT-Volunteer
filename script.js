@@ -8,7 +8,7 @@ form.addEventListener('submit', async function (event) {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    const url = 'https://script.google.com/macros/s/AKfycbwIepBTETi5Q6g69_QIi9nJyFaujEtBCkpP1LpRzpxZhCMuUtXfrBrkEBHiu9FJ-YkWzQ/exec'; // The URL of your deployed web app
+    const url = 'https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec'; // The URL of your deployed web app
 
     const response = await fetch(url, {
         method: 'POST',
@@ -26,3 +26,25 @@ form.addEventListener('submit', async function (event) {
         messageDiv.textContent = 'Error submitting the form.';
     }
 });
+
+const volunteerCountElement = document.getElementById('volunteerCount');
+
+async function updateVolunteerCount() {
+    const url = 'https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec'; // The URL of your deployed volunteer count web app
+
+    const response = await fetch(url);
+
+    if (response.ok) {
+        const count = await response.text();
+        volunteerCountElement.textContent = count;
+    } else {
+        volunteerCountElement.textContent = 'Error fetching volunteer count.';
+    }
+}
+
+// Call the function when the page loads
+updateVolunteerCount();
+
+
+
+// https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec
