@@ -34,7 +34,8 @@ async function updateVolunteerCount() {
 
     const response = await fetch(url, {
         method: 'GET',
-        mode: 'no-cors'
+        mode: 'no-cors',
+        headers: headers
     });
 
     if (response.ok) {
