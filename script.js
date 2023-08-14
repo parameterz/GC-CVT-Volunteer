@@ -30,7 +30,7 @@ form.addEventListener('submit', async function (event) {
 const volunteerCountElement = document.getElementById('volunteerCount');
 
 async function updateVolunteerCount() {
-    const url = 'https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec'; // The URL of your deployed volunteer count web app
+    const url = 'https://script.google.com/macros/s/AKfycbwD9JyeKJsR3xsaAshrElUrNUI9Qx1oxqHX2ntmPaxA7EY31WAgKRvWsYA3nvphwWtK7w/exec'; // The URL of your deployed volunteer count web app
 
     const response = await fetch(url);
 
@@ -44,7 +44,3 @@ async function updateVolunteerCount() {
 
 // Call the function when the page loads
 updateVolunteerCount();
-
-
-
-// https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec
