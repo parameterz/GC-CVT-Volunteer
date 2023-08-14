@@ -46,4 +46,4 @@ async function updateVolunteerCount() {
 }
 
 // Call the function when the page loads
-updateVolunteerCount();
+//updateVolunteerCount();
