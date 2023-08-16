@@ -27,25 +27,21 @@ form.addEventListener('submit', async function (event) {
     }
 });
 
-const volunteerCountElement = document.getElementById('volunteerCount');
 
-async function updateVolunteerCount() {
-    //replace with JQuery AJAX
-    const url = 'https://script.google.com/macros/s/AKfycbwoTfFf7cq4gkjZfKgBlgG5GnlUMe2grZLD_Ka_yAfZVETyDg5SjHslrOAE5cExZxr5aQ/exec'; // The URL of your deployed volunteer count web app
 
-    const response = await fetch(url, {
-        method: 'GET',
-        mode: 'no-cors',
-        redirect: "follow"
+    $(document).ready(function () {
+        const url = 'https://script.google.com/macros/s/AKfycbwoTfFf7cq4gkjZfKgBlgG5GnlUMe2grZLD_Ka_yAfZVETyDg5SjHslrOAE5cExZxr5aQ/exec'; // The URL of your deployed volunteer count web app
+
+        $.ajax(url,
+            {
+                success: function (data, status, xhr) {    // success callback function
+                    $('#volunteerCount').text(data);
+            }
+            });
+
     });
 
-    if (response.ok) {
-        const count = await response.text();
-        volunteerCountElement.textContent = count;
-    } else {
-        volunteerCountElement.textContent = 'Error fetching volunteer count.';
-    }
-}
+
 
 // Call the function when the page loads
 updateVolunteerCount();
