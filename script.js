@@ -8,7 +8,7 @@ async function updateVolunteerCount() {
     try {
         const count = await $.get(url);
         volunteerCountElement.text(count);
-        $("#needed").html(volunteersDesired-count);
+        $("#needed").text(volunteersDesired-count);
     } catch (error) {
         volunteerCountElement.text('Error fetching volunteer count.');
     }
