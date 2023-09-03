@@ -15,6 +15,7 @@ async function updateVolunteerCount() {
 }
 
 $(document).ready(function () {
+    $("#volunteersDesired").text(volunteersDesired);
     $('#volunteerForm').submit(async function (event) {
         event.preventDefault();
 
