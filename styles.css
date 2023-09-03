@@ -37,3 +37,7 @@ button {
     border: none;
     cursor: pointer;
 }
+p.intro {
+    color: #7e0808a4;
+    font-size: larger;
+}
