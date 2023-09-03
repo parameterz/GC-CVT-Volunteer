@@ -13,9 +13,16 @@
         <p>Sign up to volunteer!</p>
     </header>
     <main>
+        <div id="count">
         <p>
             Thank you for your interest as a volunteer model for our upcoming event. Details of the event can be found <a href="/event-details.html">here.</a>
         </p>
+        <p>
+            We need a total of <span id="volunteersDesired"></span> volunteers.
+        </p>
+            <p>Number of volunteers signed up: <span id="volunteerCount">Loading...</span>.</p>
+            <p>Which means, we still need <span id="needed">Loading...</span> volunteers!</p>
+        </div>
         <form id="volunteerForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -24,9 +31,6 @@
             <button type="submit">Sign Up</button>
         </form>
         <div id="message"></div>
-        <div id="count">
-            <p>Number of volunteers signed up: <span id="volunteerCount">Loading...</span></p>
-        </div>
 
     </main>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
