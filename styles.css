@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #00685ed7;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -38,6 +38,6 @@ button {
     cursor: pointer;
 }
 p.intro {
-    color: #7e0808a4;
+    color: #7e0808d0;
     font-size: larger;
 }
