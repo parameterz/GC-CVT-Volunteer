@@ -16,18 +16,21 @@ async function updateVolunteerCount() {
 
 $(document).ready(function () {
     $("#volunteersDesired").text(volunteersDesired);
+ 
     $('#volunteerForm').submit(async function (event) {
         event.preventDefault();
 
         const name = $('#name').val();
         const email = $('#email').val();
+        const date = Date();
 
         const url = 'https://script.google.com/macros/s/AKfycbzXmYCuNi5zXs2R3WHBbfTF8zvzjI30PKsnyRQFRmofqJYVy1lL0ByEcA-3_Tqz1ejvuQ/exec'; // The URL of your deployed web app
 
         try {
             const response = await $.post(url, {
                 name: name,
-                email: email
+                email: email,
+                date: date
             });
 
             if (response === "Volunteer added successfully.") {
