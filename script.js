@@ -24,7 +24,7 @@ $(document).ready(function () {
         const email = $('#email').val();
         const date = Date();
 
-        const url = 'https://script.google.com/macros/s/AKfycbzu2_hGo2dpzYAOu_aSf5mlnN8mqg2heCjMWskCs5_ZJpQSjj5KJk2FhR7IzZ4jDA5puQ/exec'; // The URL of your deployed web app
+        const url = 'https://script.google.com/macros/s/AKfycby5f08V3mKtF7wb2L4aRGvyk3Oqam9rtzKINVinOb1USsEUiUGhJ30oYz_lbMTQYWucSg/exec'; // The URL of your deployed web app
 
         try {
             const response = await $.post(url, {
