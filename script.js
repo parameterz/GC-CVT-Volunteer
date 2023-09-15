@@ -9,6 +9,9 @@ async function updateVolunteerCount() {
         const count = await $.get(url);
         volunteerCountElement.text(count);
         $("#needed").text(volunteersDesired-count);
+        if(volunteersDesired-count <= 0) {
+            $('#volunteerForm').hide();
+        }
     } catch (error) {
         volunteerCountElement.text('Error fetching volunteer count.');
     }
