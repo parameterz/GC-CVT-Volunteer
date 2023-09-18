@@ -8,8 +8,14 @@ async function updateVolunteerCount() {
     try {
         const count = await $.get(url);
         volunteerCountElement.text(count);
-        $("#needed").text(volunteersDesired-count);
-        if(volunteersDesired-count <= 0) {
+        if(volunteersDesired-count >1){
+            var str = `We still need ${volunteersDesired-count} volunteers.`;
+            $("#stillNeeded").text(str);
+        } else if (volunteersDesired-count == 1) {
+            var str = "We only need one more volunteer- it could be you!";
+            $("#stillNeeded").text(str);
+        } else if(volunteersDesired-count <= 0) {
+            $("#stillNeeded").text('we have all the models we need- thank you!');
             $('#volunteerForm').hide();
         }
     } catch (error) {
@@ -36,7 +42,7 @@ $(document).ready(function () {
                 date: date
             });
 
-            if (response === "Volunteer added successfully.") {
+            if (response === "(Volunteer added successfully) Thank You! We will contact you shortly.") {
                 $('#message').text(response);
                 $('#volunteerForm')[0].reset();
                 updateVolunteerCount(); // Update the count after successful submission

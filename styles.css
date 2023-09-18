@@ -37,7 +37,8 @@ button {
     border: thin solid black;
     cursor: pointer;
 }
-p.intro {
+p.needed {
     color: #7e0808d0;
     font-size: larger;
+    font-weight: bold;
 }

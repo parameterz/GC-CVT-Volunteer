@@ -5,23 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
     <link rel="stylesheet" href="styles.css">
-    <title>Student Volunteer Coordination</title>
+    <title>GC CVT Easy Volunteer Gig</title>
 </head>
 <body>
     <header>
-        <h1>Student Volunteer Coordination</h1>
-        <p>Sign up to volunteer!</p>
+        <h1>Student Volunteer Sign Up</h1>
+        <p>Easy Volunteer Gig: 4 hours credit for 3 hours of napping*</p>
     </header>
     <main>
         <div id="count">
         <p>
-            Thank you for your interest in volunteering for the Grossmont College CVT Echo program and our upcoming event. Details of the event and what you can expect as a model can be found <a href="event-details.html">here.</a>
+             
         </p>
+        <H2 class="when">Monday October 2, 2023</H2>
+        <h2 class="when">12 PM - 3 PM</h2>
+        <h3 class="where">Meet in AHN lounge</h3>
         <p class="intro">
+            The CVT Echo program students need models to scan for their upcoming performance exam. If you are interested in earning 4 hours of volunteer time while 
+            you lay quietly in a dark(-ish) room, this is the opportunity for you! 
+        </p>
+        <p>
+            An echocardiogram is a mostly painless non-invasive ultrasound 
+            exam of the heart performed while the model is lying quietly on an exam table that is rarely described as "pillowy". 
+            Models will need to wear suitable attire to allow for unencumbered access to the imaging windows on the top and side of the chest. 
+            A hospital gown and drape will be provided to ensure a comfortable, courteous, and professional exam experience. 
+            There will be some pressure on your chest as the ultrasound transducer is applied and held for the images; 
+            this has the potential to be mildly/briefly uncomfortable for some models. 
+            Most students that have volunteered to serve as models say they were comfortable and they enjoyed the experience of seeing their heart beating in real time.
+
+        </p>
+        <p>
+            *Napping is a subjective state and is not guaranteed; napping not available for some models; your mileage may vary.
+        </p>
+        <p class="needed">
             We need to recruit a total of <span id="volunteersDesired"></span> volunteers.
         </p>
             <p>Number of volunteers signed up: <span id="volunteerCount">Loading...</span>.</p>
-            <p>Which means we still need <span id="needed">Loading...</span> volunteers!</p>
+            <p><span id="stillNeeded">Loading...</span> </p>
         </div>
         <form id="volunteerForm">
             <label for="name">Name:</label>
