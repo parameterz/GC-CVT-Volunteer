@@ -37,7 +37,7 @@ button {
     border: thin solid black;
     cursor: pointer;
 }
-p.needed {
+p.needed, #message {
     color: #7e0808d0;
     font-size: larger;
     font-weight: bold;
