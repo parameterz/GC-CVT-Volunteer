@@ -42,10 +42,11 @@ $(document).ready(function () {
                 date: date
             });
 
-            if (response === "(Volunteer added successfully) Thank You! We will contact you shortly.") {
-                $('#message').text(response);
-                $('#volunteerForm')[0].reset();
-                updateVolunteerCount(); // Update the count after successful submission
+            if (response === "Volunteer added successfully.") {
+                $('#message').text(response + ' We will contact you shortly!');
+                $('#volunteerForm').hide();// hide the form
+                $('#count').hide(); // hide the description
+
             } else {
                 $('#message').text('Error submitting the form.');
             }
