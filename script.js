@@ -1,6 +1,6 @@
 // from ChatGPT
 const volunteerCountElement = $('#volunteerCount');
-const volunteersDesired = 8;
+const volunteersDesired = 7;
 
 async function updateVolunteerCount() {
     const url = 'https://script.google.com/macros/s/AKfycbwoTfFf7cq4gkjZfKgBlgG5GnlUMe2grZLD_Ka_yAfZVETyDg5SjHslrOAE5cExZxr5aQ/exec'; // The URL of your deployed volunteer count web app
